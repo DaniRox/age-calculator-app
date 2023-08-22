@@ -22,30 +22,38 @@
     <form>
 
       <div class="group-input">
-        <label>Day</label>
-        <input>
+        <label for="day">Day</label>
+        <input name="day" id="day" maxlength="2">
       </div>
 
       <div class="group-input">
-        <label>Month</label>
-        <input>
+        <label for="month">Month</label>
+        <input name="month" id="month" maxlength="2">
       </div>
 
       <div class="group-input">
-        <label>Year</label>
-        <input>
+        <label for="year">Year</label>
+        <input name="year" id="year" maxlength="4">
       </div>
       
     </form>
 
-    <div></div>
+    <div class="line"><img src="./assets/images/icon-arrow.svg" class="icon-arrow" alt="icon arrow"></div>
 
-    <div>
+    <div class="result">
 
-      <input type=""></input><span>years</span>
-      <input></input><span>months</span>
-      <input></input><span>days</span>
-
+      <div class="group-result">
+        <span id="years-result" class="input-result">--</span><span class="span"> years</span>
+      </div>
+      
+      <div class="group-result">
+        <span id="month-result" class="input-result">--</span><span class="span"> months</span>
+      </div>
+      
+      <div class="group-result">
+        <span id="days-result" class="input-result">--</span><span class="span"> days</span>
+      </div>
+      
     </div>
 
   </div>

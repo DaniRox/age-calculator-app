@@ -1,10 +1,25 @@
 @font-face {
-  font-family: poppins;
+  font-family: poppinsRegular;
   src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: poppinsItalic;
   src: url(../assets/fonts/Poppins-Italic.ttf);
+}
+@font-face {
+  font-family: poppinsExtraBoldItalic;
   src: url(../assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+@font-face {
+  font-family: poppinsExtraBold;
   src: url(../assets/fonts/Poppins-ExtraBold.ttf);
+}
+@font-face {
+  font-family: poppinsBoldItalic;
   src: url(../assets/fonts/Poppins-BoldItalic.ttf);
+}
+@font-face {
+  font-family: poppinsBold;
   src: url(../assets/fonts/Poppins-Bold.ttf);
 }
 body {
@@ -49,12 +64,12 @@ body {
 }
 
 .card {
+  margin: 2rem;
   width: 20rem;
-  height: 22rem;
+  height: 28rem;
   padding: 1rem;
   background-color: hsl(0, 0%, 100%);
   border-radius: 1.5rem 1.5rem 6rem 1.5rem;
-  font-family: poppins;
 }
 .card form {
   width: 100%;
@@ -64,19 +79,62 @@ body {
   justify-content: space-between;
 }
 .card form .group-input {
-  width: 5rem;
+  width: 6rem;
   display: flex;
   flex-direction: column;
 }
 .card form .group-input label {
   color: hsl(0, 1%, 44%);
-  font-size: 1rem;
+  font-family: poppinsBold;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  margin-bottom: 0.3rem;
 }
 .card form .group-input input {
-  height: 2rem;
+  color: hsl(0, 0%, 8%);
+  font-family: poppinsBold;
+  font-size: 1.4rem;
+  height: 1.5rem;
+  padding: 1rem;
   background-color: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 86%);
-  border-radius: 0.2rem;
+  border-radius: 0.6rem;
+}
+.card form .group-input input:focus-visible {
+  outline: none;
+}
+.card .line {
+  height: 0.2rem;
+  width: 100%;
+  background-color: hsl(0, 0%, 94%);
+  margin: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .line .icon-arrow {
+  background-color: hsl(259, 100%, 65%);
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  padding: 1.2rem;
+}
+.card .result {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  font-size: 3.5rem;
+  font-family: poppinsExtraBoldItalic;
+}
+.card .result .group-result {
+  display: flex;
+  flex-direction: row;
+}
+.card .result .group-result .input-result {
+  color: hsl(259, 100%, 65%);
+}
+.card .result .group-result .span {
+  color: hsl(0, 0%, 8%);
 }/*# sourceMappingURL=styles.css.map */

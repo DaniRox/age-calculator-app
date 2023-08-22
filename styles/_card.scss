@@ -3,12 +3,12 @@
 @use "globals";
 
 .card{
+    margin: 2rem;
     width: 20rem;
-    height: 22rem;
+    height: 28rem;
     padding: 1rem;
     background-color: globals.$white;
     border-radius: 1.5rem 1.5rem 6rem 1.5rem;
-    font-family: poppins;
 
     form{
         width: 100%;
@@ -18,22 +18,72 @@
         justify-content: space-between;
 
         .group-input{
-            width: 5rem;
+            width: 6rem;
             display: flex;
             flex-direction: column;
 
             label{
                 color: globals.$smokey-grey;
-                font-size: 1rem;
+                font-family: poppinsBold;
+                font-size: 0.8rem;
                 text-transform: uppercase;
                 letter-spacing: 0.2rem;
+                margin-bottom: 0.3rem;
             }
 
             input{
-                height: 2rem;
+                color: globals.$off-black;
+                font-family: poppinsBold;
+                font-size: 1.4rem;
+                height: 1.5rem;
+                padding: 1rem;
                 background-color: globals.$white;
                 border: 1px solid globals.$light-grey;
-                border-radius: 0.2rem;
+                border-radius: 0.6rem;
+            
+                &:focus-visible{
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .line{
+        height: 0.2rem;
+        width: 100%;
+        background-color: globals.$off-white;
+        margin: 4rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon-arrow{
+            background-color: globals.$purple;
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            padding: 1.2rem;
+        }
+    }
+
+    .result{
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        font-style: italic;
+        font-size: 3.5rem;
+        font-family: poppinsExtraBoldItalic;
+
+        .group-result{
+            display: flex;
+            flex-direction: row;
+
+            .input-result{
+                color: globals.$purple;
+            }
+
+            .span{
+                color: globals.$off-black;
             }
         }
     }
