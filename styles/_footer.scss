@@ -11,7 +11,7 @@
     
     .footer__txt {
         color: globals.$off-black;
-        font-family: poppins;
+        font-family: poppinsBold;
         font-size: 0.7rem;
         font-weight: 400;
         display: flex;
@@ -20,6 +20,7 @@
 
         .footer__link {
             color: globals.$purple;
+            font-family: poppinsBold;
             font-size: 1.1rem;
             text-decoration: none;
             font-weight: 700;

@@ -4,6 +4,12 @@
     }
 }
 
+@mixin desktop-s {
+    @media screen and (min-width: 770px) {
+        @content;
+    }
+}
+
 @mixin desktop {
     @media screen and (min-width: 1440px) {
         @content;
