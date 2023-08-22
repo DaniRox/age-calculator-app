@@ -116,7 +116,7 @@ html body {
   border-radius: 0.6rem;
 }
 .card form .group-input input:focus-visible {
-  outline: none;
+  outline: 1px solid hsl(259, 100%, 65%);
 }
 .card .line {
   height: 0.2rem;
@@ -127,12 +127,21 @@ html body {
   justify-content: center;
   align-items: center;
 }
-.card .line .icon-arrow {
-  background-color: hsl(259, 100%, 65%);
+.card .line .btn-arrow {
+  background-color: hsl(0, 0%, 8%);
   width: 1.6rem;
   height: 1.6rem;
+  border: none;
   border-radius: 50%;
-  padding: 1.2rem;
+  padding: 2rem;
+  cursor: pointer;
+  background-image: url(../assets/images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s;
+}
+.card .line .btn-arrow:hover {
+  background-color: hsl(259, 100%, 65%);
 }
 .card .result {
   margin: 2rem 0;

@@ -42,7 +42,7 @@
                 border-radius: 0.6rem;
             
                 &:focus-visible{
-                    outline: none;
+                    outline: 1px solid globals.$purple;
                 }
             }
         }
@@ -57,13 +57,24 @@
         justify-content: center;
         align-items: center;
 
-        .icon-arrow{
-            background-color: globals.$purple;
+        .btn-arrow{
+            background-color: globals.$off-black;
             width: 1.6rem;
             height: 1.6rem;
+            border: none;
             border-radius: 50%;
-            padding: 1.2rem;
+            padding: 2rem;
+            cursor: pointer;
+            background-image: url(../assets/images/icon-arrow.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.3s;
+
+            &:hover{
+                background-color: globals.$purple;
+            }
         }
+
     }
 
     .result{
