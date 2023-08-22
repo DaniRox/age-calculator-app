@@ -1,0 +1,37 @@
+@use "media-queries";
+@use "globals";
+
+.attribution {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    position: relative;
+    
+    .footer__txt {
+        color: globals.$off-black;
+        font-family: poppins;
+        font-size: 0.7rem;
+        font-weight: 400;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .footer__link {
+            color: globals.$purple;
+            font-size: 1.1rem;
+            text-decoration: none;
+            font-weight: 700;
+            margin: 0 0.3rem;
+        }
+    }
+
+    @include media-queries.desktop {
+        position: relative;
+    }
+}
+
+.footer--relativo {
+    position: relative;
+}

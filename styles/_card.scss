@@ -1,0 +1,40 @@
+@use "media-queries";
+
+@use "globals";
+
+.card{
+    width: 20rem;
+    height: 22rem;
+    padding: 1rem;
+    background-color: globals.$white;
+    border-radius: 1.5rem 1.5rem 6rem 1.5rem;
+    font-family: poppins;
+
+    form{
+        width: 100%;
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .group-input{
+            width: 5rem;
+            display: flex;
+            flex-direction: column;
+
+            label{
+                color: globals.$smokey-grey;
+                font-size: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
+            }
+
+            input{
+                height: 2rem;
+                background-color: globals.$white;
+                border: 1px solid globals.$light-grey;
+                border-radius: 0.2rem;
+            }
+        }
+    }
+}
