@@ -40,14 +40,14 @@ $smokey-grey: hsl(0, 1%, 44%);
 $off-black: hsl(0, 0%, 8%);
 
 html{
-    font-size: 16px;
+    font-size: 14px;
 
     @include media-queries.tablet {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     @include media-queries.desktop-s {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     body {
@@ -55,5 +55,9 @@ html{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    @include media-queries.desktop {
+        font-size: 18px;
     }
 }

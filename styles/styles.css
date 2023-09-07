@@ -23,16 +23,16 @@
   src: url(../assets/fonts/Poppins-Bold.ttf);
 }
 html {
-  font-size: 16px;
+  font-size: 14px;
 }
 @media screen and (min-width: 375px) {
   html {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 @media screen and (min-width: 770px) {
   html {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 html body {
@@ -41,8 +41,17 @@ html body {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 18px;
+  }
+}
 
-.attribution {
+footer {
+  position: absolute;
+  bottom: 1rem;
+}
+footer .attribution {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -50,7 +59,7 @@ html body {
   bottom: 0;
   position: relative;
 }
-.attribution .footer__txt {
+footer .attribution .footer__txt {
   color: hsl(0, 0%, 8%);
   font-family: poppinsBold;
   font-size: 0.7rem;
@@ -59,7 +68,7 @@ html body {
   flex-direction: row;
   align-items: center;
 }
-.attribution .footer__txt .footer__link {
+footer .attribution .footer__txt .footer__link {
   color: hsl(259, 100%, 65%);
   font-family: poppinsBold;
   font-size: 1.1rem;
@@ -68,13 +77,9 @@ html body {
   margin: 0 0.3rem;
 }
 @media screen and (min-width: 1440px) {
-  .attribution {
+  footer .attribution {
     position: relative;
   }
-}
-
-.footer--relativo {
-  position: relative;
 }
 
 .card {
@@ -84,6 +89,13 @@ html body {
   padding: 1.5rem;
   background-color: hsl(0, 0%, 100%);
   border-radius: 1.5rem 1.5rem 6rem 1.5rem;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 770px) {
+  .card {
+    width: 32rem;
+    height: 25rem;
+  }
 }
 .card form {
   width: 100%;
@@ -92,15 +104,21 @@ html body {
   flex-direction: row;
   justify-content: space-between;
 }
+@media screen and (min-width: 770px) {
+  .card form {
+    width: 75%;
+    margin: 1rem 0;
+  }
+}
 .card form .group-input {
-  width: 6rem;
+  width: 30%;
   display: flex;
   flex-direction: column;
 }
 .card form .group-input label {
   color: hsl(0, 1%, 44%);
   font-family: poppinsBold;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   margin-bottom: 0.3rem;
@@ -109,7 +127,7 @@ html body {
   color: hsl(0, 0%, 8%);
   font-family: poppinsBold;
   font-size: 1.4rem;
-  height: 1.5rem;
+  height: 1rem;
   padding: 1rem;
   background-color: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 86%);
@@ -127,29 +145,42 @@ html body {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 770px) {
+  .card .line {
+    margin: 2rem 0;
+    justify-content: flex-end;
+  }
+}
 .card .line .btn-arrow {
   background-color: hsl(0, 0%, 8%);
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border: none;
   border-radius: 50%;
-  padding: 2rem;
   cursor: pointer;
-  background-image: url(../assets/images/icon-arrow.svg);
-  background-repeat: no-repeat;
-  background-position: center;
   transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card .line .btn-arrow:hover {
   background-color: hsl(259, 100%, 65%);
+}
+.card .line .btn-arrow img {
+  width: 1.5rem;
 }
 .card .result {
   margin: 2rem 0;
   display: flex;
   flex-direction: column;
   font-style: italic;
-  font-size: 3.6rem;
+  font-size: 3.1rem;
   font-family: poppinsExtraBoldItalic;
+}
+@media screen and (min-width: 770px) {
+  .card .result {
+    font-size: 3.6rem;
+  }
 }
 .card .result .group-result {
   display: flex;
