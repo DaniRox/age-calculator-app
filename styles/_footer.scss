@@ -7,9 +7,6 @@ footer{
     position: absolute;
     bottom: 1rem;
 
-    @include media-queries.desktop-s {
-    }
-
     .attribution {
         width: 100%;
         display: flex;

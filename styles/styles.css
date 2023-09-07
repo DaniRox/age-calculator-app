@@ -95,6 +95,7 @@ footer .attribution .footer__txt .footer__link {
   .card {
     width: 32rem;
     height: 25rem;
+    margin-top: 6%;
   }
 }
 .card form {
