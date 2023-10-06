@@ -86,7 +86,7 @@ footer .attribution .footer__txt .footer__link {
   margin: 2rem;
   width: 20rem;
   height: 28rem;
-  padding: 1.5rem;
+  padding: 3rem 1.5rem;
   background-color: hsl(0, 0%, 100%);
   border-radius: 1.5rem 1.5rem 6rem 1.5rem;
   box-sizing: border-box;
@@ -100,31 +100,36 @@ footer .attribution .footer__txt .footer__link {
 }
 .card form {
   width: 100%;
-  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.card form .group-form {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 @media screen and (min-width: 770px) {
-  .card form {
+  .card form .group-form {
     width: 75%;
-    margin: 1rem 0;
   }
 }
-.card form .group-input {
+.card form .group-form .group-input {
   width: 30%;
   display: flex;
   flex-direction: column;
 }
-.card form .group-input label {
-  color: hsl(0, 1%, 44%);
+.card form .group-form .group-input #label {
   font-family: poppinsBold;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   margin-bottom: 0.3rem;
 }
-.card form .group-input input {
+.card form .group-form .group-input .label-color {
+  color: hsl(0, 1%, 44%);
+}
+.card form .group-form .group-input input {
   color: hsl(0, 0%, 8%);
   font-family: poppinsBold;
   font-size: 1.4rem;
@@ -132,12 +137,19 @@ footer .attribution .footer__txt .footer__link {
   padding: 1rem;
   background-color: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 86%);
-  border-radius: 0.6rem;
+  border-radius: 0.3rem;
 }
-.card form .group-input input:focus-visible {
+.card form .group-form .group-input input:focus-visible {
   outline: 1px solid hsl(259, 100%, 65%);
 }
-.card .line {
+.card form .group-form .group-input .span-error-day, .card form .group-form .group-input .span-error-month, .card form .group-form .group-input .span-error-year {
+  display: flex;
+  font-family: poppinsItalic;
+  color: hsl(0, 100%, 67%);
+  font-size: 0.5rem;
+  margin: 0.4rem 0;
+}
+.card form .line {
   height: 0.2rem;
   width: 100%;
   background-color: hsl(0, 0%, 94%);
@@ -147,31 +159,28 @@ footer .attribution .footer__txt .footer__link {
   align-items: center;
 }
 @media screen and (min-width: 770px) {
-  .card .line {
+  .card form .line {
     margin: 2rem 0;
     justify-content: flex-end;
   }
 }
-.card .line .btn-arrow {
+.card form .line .btn-arrow {
   background-color: hsl(0, 0%, 8%);
   width: 3.5rem;
   height: 3.5rem;
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  outline: none;
   transition: all 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.card .line .btn-arrow:hover {
+.card form .line .btn-arrow:hover {
   background-color: hsl(259, 100%, 65%);
 }
-.card .line .btn-arrow img {
-  width: 1.5rem;
-}
 .card .result {
-  margin: 2rem 0;
   display: flex;
   flex-direction: column;
   font-style: italic;
