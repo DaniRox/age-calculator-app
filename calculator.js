@@ -1,33 +1,28 @@
-let btnForm = document.querySelector(".btn-arrow");
+let btnForm = document.getElementById("btn-arrow");
 
-// console.log(currentYear);
+let daysResult = document.getElementById("days-result")
+let monthsResult = document.getElementById("months-result")
+let yearsResult = document.getElementById("years-result")
 
-let resultYear = document.getElementById("years-result");
+
+btnForm.addEventListener("click", function(event){
+    event.preventDefault()
+})
+
+
+
+btnForm.addEventListener("click", results);
 
 
 function results(){
-    const theyear = resultYear - currentYear;
-    resultYear.innerHTML = ${theyear};
-    console.log(resultYear);
+    console.log(currentMonth);
+    let dayImput = parseInt(day.value);
+    let monthImput = parseInt(month.value);
+    let yearImput = parseInt(year.value);
+    daysResult.innerHTML = currentDay;
+    monthsResult.innerHTML = currentMonth - monthImput;
+    yearsResult.innerHTML = currentYear - yearImput;
+
 }
 
-// switch(fecha){
-//     case 1:
-//     case 3:
-//     case 5:
-//     case 7:
-//     case 8:
-//     case 10:
-//     case 12:
-//         days = 31;
-//         break;
-//     case 2:
-//         days = 28;
-//         break;
-//     case 4:
-//     case 6:
-//     case 9:
-//     case 11:
-//         days = 30;
-//         break;
-// }
+
