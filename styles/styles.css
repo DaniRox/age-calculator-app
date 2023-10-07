@@ -165,9 +165,10 @@ footer .attribution .footer__txt .footer__link {
   }
 }
 .card form .line .btn-arrow {
-  background-color: hsl(0, 0%, 8%);
-  width: 3.5rem;
-  height: 3.5rem;
+  background-color: hsl(259, 100%, 65%);
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 1rem;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -178,7 +179,7 @@ footer .attribution .footer__txt .footer__link {
   align-items: center;
 }
 .card form .line .btn-arrow:hover {
-  background-color: hsl(259, 100%, 65%);
+  background-color: hsl(0, 0%, 8%);
 }
 .card .result {
   display: flex;
@@ -201,4 +202,5 @@ footer .attribution .footer__txt .footer__link {
 }
 .card .result .group-result .span {
   color: hsl(0, 0%, 8%);
+  margin-left: 0.5rem;
 }/*# sourceMappingURL=styles.css.map */

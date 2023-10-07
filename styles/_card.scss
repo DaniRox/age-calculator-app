@@ -89,9 +89,10 @@
             }
     
             .btn-arrow{
-                background-color: globals.$off-black;
-                width: 3.5rem;
-                height: 3.5rem;
+                background-color: globals.$purple;
+                width: 2.5rem;
+                height: 2.5rem;
+                padding: 1rem;
                 border: none;
                 border-radius: 50%;
                 cursor: pointer;
@@ -102,7 +103,7 @@
                 align-items: center;
     
                 &:hover{
-                    background-color: globals.$purple;
+                    background-color: globals.$off-black;
                 }
     
             }
@@ -132,6 +133,7 @@
 
             .span{
                 color: globals.$off-black;
+                margin-left: 0.5rem;
             }
         }
     }
