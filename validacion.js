@@ -80,7 +80,7 @@ year.addEventListener("blur", function (e){
 function valid(){
     var i;
     for (i = 0; i < labels.length; i ++){
-        labels[i].style.color = "hsl(0, 0%, 8%)";
+        labels[i].style.color = "hsl(0, 1%, 44%)";
     }
     var j;
     for (j = 0; j < imputs.length; j ++){
