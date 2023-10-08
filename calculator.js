@@ -5,60 +5,33 @@ let monthsResult = document.getElementById("months-result")
 let yearsResult = document.getElementById("years-result")
 
 
-/*let daysMonth = [
-    {
-        "01": 31,
-    },
-    {
-        "02": 28
-    },
-    {
-        "03": 31
-    },
-    {
-        "04": 30
-    },
-    {
-        "05": 31
-    },
-    {
-        "06": 30
-    },
-    {
-        "07": 31
-    },
-    {
-        "08": 31
-    },
-    {
-        "09": 30
-    },
-    {
-        "10": 31
-    },
-    {
-        "11": 30
-    },
-    {
-        "12": 31
-    },
-]*/
+let dayInput;
+let monthInput;
+let yearInput;
 
-let daysMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+const daysMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 
 btnForm.addEventListener("click", function(event){
     event.preventDefault()
 })
 
-
+btnForm.addEventListener("click", enabledBtn);
 
 btnForm.addEventListener("click", results);
 
+function enabledBtn(){
+    if(dayEnabled === true && monthEnabled === true && yearEnabled === true){
+        btnForm.disabled = false;
+    } 
+}
+
 function totalDays(){
     let daysTotal;
+    monthInput = parseInt(month.value) - 1;
     for(let i = 0; i < daysMonth.length ; i++){
-        if(daysMonth[i] > parseInt(month.value)){
+        if(daysMonth[monthInput] > daysMonth[monthInput]){
             daysTotal = daysMonth[i] + daysTotal;
         }
     }
@@ -67,27 +40,27 @@ function totalDays(){
 
 function results(){
     console.log(currentMonth);
-    let dayImput = parseInt(day.value);
-    let monthImput = parseInt(month.value) - 1;
-    let yearImput = parseInt(year.value);
-    
+    dayInput = parseInt(day.value);
+    monthInput = parseInt(month.value) - 1;
+    yearInput = parseInt(year.value);
 
-    if(monthImput > currentMonth){
-        yearsResult.innerHTML = currentYear - yearImput - 1
+    if(monthInput > currentMonth){
+        yearsResult.innerHTML = currentYear - yearInput - 1
     } else {
-        yearsResult.innerHTML = currentYear - yearImput;
+        yearsResult.innerHTML = currentYear - yearInput;
     }
+    
     let difference;
-    if(monthImput > currentMonth){
-        difference = monthImput - currentMonth;
+    if(monthInput > currentMonth){
+        difference = monthInput - currentMonth;
         console.log(difference);
         monthsResult.innerHTML = 12 - difference;
     } else {
-        monthsResult.innerHTML = currentMonth - monthImput - 1;
+        monthsResult.innerHTML = currentMonth - monthInput - 1;
     }
 
     for(let i = 0; i < daysMonth.length; i ++){
-        daysResult.innerHTML =  currentDay + daysMonth[monthImput] - dayImput;
+        daysResult.innerHTML =  currentDay + daysMonth[monthInput] - dayInput;
     
     }
     
