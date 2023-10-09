@@ -21,18 +21,11 @@ btnForm.addEventListener("click", enabledBtn);
 
 btnForm.addEventListener("click", results);
 
+btnForm.disabled = true;
+
 function enabledBtn(){
     if(dayEnabled === true && monthEnabled === true && yearEnabled === true){
         btnForm.disabled = false;
-    } 
-    for(let i = 0; i <= inputs.length; i ++){
-        let value = inputs[i].value;
-        if(value === ""){
-            console.log("vacio");
-            btnForm.disabled = false;
-        } else {
-            btnForm.disabled = true;
-        }
     }
 }
 

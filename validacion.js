@@ -36,6 +36,7 @@ day.addEventListener("blur", function (e){
         spanErrorDay.innerHTML = "";
         btnForm.disabled = false;
     }
+
     if(dayValid.length === 0) {
         spanErrorDay.innerHTML = "This field is required";
         labels.forEach(labelError);
