@@ -39,10 +39,10 @@ $smokey-grey: hsl(0, 1%, 44%);
 $off-black: hsl(0, 0%, 8%);
 
 html{
-    font-size: 14px;
+    font-size: 16px;
 
     @include media-queries.tablet {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     @include media-queries.desktop-s {
@@ -50,6 +50,7 @@ html{
     }
 
     body {
+        margin-top: 4rem;
         background-color: $off-white;
         display: flex;
         flex-direction: column;

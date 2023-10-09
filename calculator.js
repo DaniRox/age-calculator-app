@@ -25,9 +25,9 @@ function enabledBtn(){
     if(dayEnabled === true && monthEnabled === true && yearEnabled === true){
         btnForm.disabled = false;
     } 
-    //else if(!dayInput === true && !monthInput === true && !yearInput === true){
-    //     btnForm.disabled = false;
-    // } 
+    if(!dayInput === true && !monthInput === true && !yearInput === true){
+        btnForm.disabled = false;
+    } 
 }
 
 function totalDays(){
