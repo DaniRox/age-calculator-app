@@ -42,14 +42,19 @@ html body {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 375px) {
+  html body {
+    margin-top: 1rem;
+  }
+}
 @media screen and (min-width: 1440px) {
-  html {
+  html body {
+    margin-top: 1rem;
     font-size: 18px;
   }
 }
 
 footer {
-  position: absolute;
   bottom: 1rem;
 }
 footer .attribution {
@@ -58,7 +63,6 @@ footer .attribution {
   justify-content: center;
   align-items: center;
   bottom: 0;
-  position: relative;
 }
 footer .attribution .footer__txt {
   color: hsl(0, 0%, 8%);
@@ -77,14 +81,9 @@ footer .attribution .footer__txt .footer__link {
   font-weight: 700;
   margin: 0 0.3rem;
 }
-@media screen and (min-width: 1440px) {
-  footer .attribution {
-    position: relative;
-  }
-}
 
 .card {
-  margin: 2rem;
+  margin: 3rem 2rem;
   width: 20rem;
   height: 28rem;
   padding: 3rem 1.5rem;
@@ -97,6 +96,7 @@ footer .attribution .footer__txt .footer__link {
     width: 32rem;
     height: 25rem;
     margin-top: 6%;
+    margin-bottom: 4rem;
   }
 }
 .card form {

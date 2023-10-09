@@ -5,7 +5,7 @@ let currentMonth = date.getMonth() + 1;
 let currentDay = date.getDate();
 
 let labels = document.querySelectorAll("#label");
-let inputs = document.querySelectorAll(".input");
+let inputs = document.querySelectorAll("input[name='day'], input[name='month'], input[name='year']");
 let spans = document.querySelectorAll("#span");
 
 let labelDay = document.querySelector(".label-day");

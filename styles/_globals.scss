@@ -55,9 +55,14 @@ html{
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
 
-    @include media-queries.desktop {
-        font-size: 18px;
+        @include media-queries.tablet {
+            margin-top: 1rem;
+        }
+
+        @include media-queries.desktop {
+            margin-top: 1rem;
+            font-size: 18px;
+        }
     }
 }

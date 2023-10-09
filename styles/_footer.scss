@@ -3,8 +3,8 @@
 
 
 footer{
-    position: absolute;
     bottom: 1rem;
+
 
     .attribution {
         width: 100%;
@@ -12,7 +12,6 @@ footer{
         justify-content: center;
         align-items: center;
         bottom: 0;
-        position: relative;
         
         .footer__txt {
             color: globals.$off-black;
@@ -31,10 +30,6 @@ footer{
                 font-weight: 700;
                 margin: 0 0.3rem;
             }
-        }
-    
-        @include media-queries.desktop {
-            position: relative;
         }
     }
 }
