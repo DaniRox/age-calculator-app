@@ -16,8 +16,6 @@ let day = document.querySelector("#day");
 let month = document.querySelector("#month");
 let year = document.querySelector("#year");
 
-let inputYear = document.querySelector("#year").value;
-
 let spanErrorDay = document.querySelector(".span-error-day");
 let spanErrorMonth = document.querySelector(".span-error-month");
 let spanErrorYear = document.querySelector(".span-error-year");
@@ -69,11 +67,12 @@ let yearEnabled;
 
 day.addEventListener("blur", function (e){
     const dayValid = e.currentTarget.value;
-    console.log(dayValid);
     dayInput = parseInt(day.value);
     
     if(dayValid > 0 && dayValid < 32) {
+        valid();
         dayEnabled = true;
+        spanErrorDay.innerHTML = "";
     }
     if(dayValid.length === 0) {
         spanErrorDay.innerHTML = "This field is required";
@@ -90,6 +89,8 @@ day.addEventListener("blur", function (e){
         labels.forEach(labelError);
         inputs.forEach(inputError);
         spanErrorDay.innerHTML = "Must be a valid date";
+    } else {
+        spanErrorDay.innerHTML = "";
     }
 })
 
@@ -97,7 +98,9 @@ day.addEventListener("blur", function (e){
 month.addEventListener("blur", function (e){
     const monthValid = e.currentTarget.value;
     if(monthValid > 0 && monthValid < 13) {
+        valid();
         monthEnabled = true;
+        spanErrorMonth.innerHTML = "";
     }
     if(monthValid.length === 0) {
          spanErrorMonth.innerHTML = "This field is required";
@@ -122,7 +125,9 @@ month.addEventListener("blur", function (e){
 year.addEventListener("blur", function (e){
     const yearValid = e.currentTarget.value;
     if(parseInt(year.value) <= currentYear) {
+        valid();
         yearEnabled = true;
+        spanErrorYear.innerHTML = "";
     }
     if(yearValid.length === 0) {
         spanErrorYear.innerHTML = "This field is required";
@@ -139,14 +144,18 @@ year.addEventListener("blur", function (e){
 })
 
 
-// function valid(e){
-//     e.style.color = "hsl(0, 1%, 44%)";
-//     e.style.outline = "1px solid hsl(0, 0%, 86%)";
+function valid(){
+    labels.forEach(labelValid);
+    inputs.forEach(inputValid);
+}
 
-//     for (h = 0; h <= spans.length; h ++){
-//         spans[h].innerHTML = "";
-//     }
-// }
+function labelValid(e){
+    e.style.color = "hsl(0, 1%, 44%)";
+}
+
+function inputValid(e){
+    e.style.outline = "1px solid hsl(0, 0%, 86%)";
+}
 
 function labelError(e){
     e.style.color = "hsl(0, 100%, 67%)";

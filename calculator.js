@@ -35,7 +35,6 @@ function totalDays(){
             daysTotal = daysMonth[i] + daysTotal;
         }
     }
-    console.log(daysTotal);
 }
 
 function results(){
