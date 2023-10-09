@@ -50,7 +50,7 @@ html{
     }
 
     body {
-        margin-top: 4rem;
+        margin-top: 5rem;
         background-color: $off-white;
         display: flex;
         flex-direction: column;
@@ -63,6 +63,14 @@ html{
         @include media-queries.desktop {
             margin-top: 1rem;
             font-size: 18px;
+        }
+
+        footer {
+            position: absolute;
+
+            @include media-queries.desktop-s {
+                position: relative;
+            }
         }
     }
 }

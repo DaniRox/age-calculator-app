@@ -75,7 +75,7 @@
             }
         }
 
-        .line{
+        #btn{
             height: 0.2rem;
             width: 100%;
             background-color: globals.$off-white;
@@ -108,9 +108,42 @@
                 }
     
             }
-    
         }
 
+        #btn-reset{
+            height: 0.2rem;
+            width: 100%;
+            background-color: globals.$off-white;
+            margin: 4rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            @include media-queries.desktop-s {
+                margin: 2rem 0;
+                justify-content: flex-end;
+            }
+    
+            .btn-reset{
+                background-color: globals.$off-white;
+                width: 2.5rem;
+                height: 2.5rem;
+                padding: 1rem;
+                border: 4px solid globals.$purple;
+                border-radius: 50%;
+                cursor: pointer;
+                outline: none;
+                transition: all 0.3s;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                &:hover{
+                    background-color: globals.$off-black;
+                }
+    
+            }
+        }
     }
 
     .result{

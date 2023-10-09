@@ -1,4 +1,6 @@
 let btnForm = document.getElementById("btn-arrow");
+let btn = document.getElementById("btn");
+let btnReset = document.getElementById("btn-reset");
 
 let daysResult = document.getElementById("days-result")
 let monthsResult = document.getElementById("months-result")
@@ -21,7 +23,19 @@ btnForm.addEventListener("click", enabledBtn);
 
 btnForm.addEventListener("click", results);
 
+btnForm.addEventListener("click", switchBtn);
+
 btnForm.disabled = true;
+
+function switchBtn(){
+    if(btn.style.display === "flex" && btnReset.style.display === "none"){
+        btn.style.display = "none";
+        btnReset.style.display = "flex";
+    } else {
+        btn.style.display = "none";
+        btnReset.style.display = "flex";
+    }
+}
 
 function enabledBtn(){
     if(dayEnabled === true && monthEnabled === true && yearEnabled === true){
@@ -69,7 +83,6 @@ function results(){
         daysResult.innerHTML =  currentDay + daysMonth[monthInput - 1] - dayInput;
     
     }
-    
 }
 
 

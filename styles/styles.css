@@ -36,7 +36,7 @@ html {
   }
 }
 html body {
-  margin-top: 4rem;
+  margin-top: 5rem;
   background-color: hsl(0, 0%, 94%);
   display: flex;
   flex-direction: column;
@@ -51,6 +51,14 @@ html body {
   html body {
     margin-top: 1rem;
     font-size: 18px;
+  }
+}
+html body footer {
+  position: absolute;
+}
+@media screen and (min-width: 770px) {
+  html body footer {
+    position: relative;
   }
 }
 
@@ -150,7 +158,7 @@ footer .attribution .footer__txt .footer__link {
   font-size: 0.5rem;
   margin: 0.4rem 0;
 }
-.card form .line {
+.card form #btn {
   height: 0.2rem;
   width: 100%;
   background-color: hsl(0, 0%, 94%);
@@ -160,12 +168,12 @@ footer .attribution .footer__txt .footer__link {
   align-items: center;
 }
 @media screen and (min-width: 770px) {
-  .card form .line {
+  .card form #btn {
     margin: 2rem 0;
     justify-content: flex-end;
   }
 }
-.card form .line .btn-arrow {
+.card form #btn .btn-arrow {
   background-color: hsl(259, 100%, 65%);
   width: 2.5rem;
   height: 2.5rem;
@@ -179,7 +187,39 @@ footer .attribution .footer__txt .footer__link {
   justify-content: center;
   align-items: center;
 }
-.card form .line .btn-arrow:hover {
+.card form #btn .btn-arrow:hover {
+  background-color: hsl(0, 0%, 8%);
+}
+.card form #btn-reset {
+  height: 0.2rem;
+  width: 100%;
+  background-color: hsl(0, 0%, 94%);
+  margin: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 770px) {
+  .card form #btn-reset {
+    margin: 2rem 0;
+    justify-content: flex-end;
+  }
+}
+.card form #btn-reset .btn-reset {
+  background-color: hsl(0, 0%, 94%);
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 1rem;
+  border: 4px solid hsl(259, 100%, 65%);
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card form #btn-reset .btn-reset:hover {
   background-color: hsl(0, 0%, 8%);
 }
 .card .result {
