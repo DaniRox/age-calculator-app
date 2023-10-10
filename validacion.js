@@ -24,7 +24,6 @@ let monthEnabled;
 let yearEnabled;
 
 
-
 day.addEventListener("blur", function (e){
     const dayValid = e.currentTarget.value;
     dayInput = parseInt(day.value);
