@@ -38,7 +38,7 @@
                 display: flex;
                 flex-direction: column;
 
-                .label{
+                label{
                     color: globals.$smokey-grey;
                     font-family: poppinsBold;
                     font-size: 0.7rem;
@@ -72,7 +72,7 @@
             }
         }
 
-        #btn{
+        .div-btn{
             height: 0.2rem;
             width: 100%;
             background-color: globals.$off-white;
@@ -86,7 +86,7 @@
                 justify-content: flex-end;
             }
     
-            .btn-arrow{
+            #btn-arrow{
                 background-color: globals.$purple;
                 width: 2.5rem;
                 height: 2.5rem;
@@ -106,7 +106,7 @@
             }
         }
 
-        #btn-reset{
+        .div-btn-reset{
             height: 0.2rem;
             width: 100%;
             background-color: globals.$off-white;
@@ -120,7 +120,7 @@
                 justify-content: flex-end;
             }
     
-            .btn-reset{
+            #btn-reset{
                 background-color: globals.$off-white;
                 width: 2.5rem;
                 height: 2.5rem;
