@@ -57,12 +57,6 @@ html{
             font-size: 18px;
         }
 
-        footer {
-            position: absolute;
 
-            @include media-queries.desktop-s {
-                position: relative;
-            }
-        }
     }
 }

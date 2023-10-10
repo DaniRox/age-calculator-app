@@ -43,17 +43,15 @@ html body {
     font-size: 18px;
   }
 }
-html body footer {
-  position: absolute;
-}
-@media screen and (min-width: 770px) {
-  html body footer {
-    position: relative;
-  }
-}
 
 footer {
   bottom: 1rem;
+  position: absolute;
+}
+@media screen and (min-width: 770px) {
+  footer {
+    position: absolute;
+  }
 }
 footer .attribution {
   width: 100%;

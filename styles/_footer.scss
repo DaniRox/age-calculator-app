@@ -4,7 +4,11 @@
 
 footer{
     bottom: 1rem;
+    position: absolute;
 
+    @include media-queries.desktop-s {
+        position: absolute;
+    }
 
     .attribution {
         width: 100%;
