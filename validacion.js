@@ -4,9 +4,8 @@ let currentYear = date.getFullYear();
 let currentMonth = date.getMonth(); 
 let currentDay = date.getDate();
 
-let labels = document.querySelectorAll("#label");
+let labels = document.querySelectorAll("label[for='day'], label[for='month'], label[for='year']");
 let inputs = document.querySelectorAll("input[name='day'], input[name='month'], input[name='year']");
-let spans = document.querySelectorAll("#span");
 
 let labelDay = document.querySelector(".label-day");
 let labelMonth = document.querySelector(".label-month");
@@ -16,9 +15,9 @@ let day = document.querySelector("#day");
 let month = document.querySelector("#month");
 let year = document.querySelector("#year");
 
-let spanErrorDay = document.querySelector(".span-error-day");
-let spanErrorMonth = document.querySelector(".span-error-month");
-let spanErrorYear = document.querySelector(".span-error-year");
+let spanErrorDay = document.querySelector("span[class='span-error-day']");
+let spanErrorMonth = document.querySelector("span[class='span-error-month']");
+let spanErrorYear = document.querySelector("span[class='span-error-year']");
 
 let dayEnabled;
 let monthEnabled;
@@ -55,8 +54,6 @@ day.addEventListener("blur", function (e){
         inputs.forEach(inputError);
         spanErrorDay.innerHTML = "Must be a valid date";
         btnForm.disabled = true;
-    } else {
-        spanErrorDay.innerHTML = "";
     }
 })
 
