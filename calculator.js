@@ -89,7 +89,6 @@ function results(){
 
     }else if(monthInput < currentMonth){
         yearsResult.innerHTML = currentYear - yearInput;
-
         if(dayInput > currentDay){
             monthsResult.innerHTML = 0;
             daysResult.innerHTML = daysDifference;
