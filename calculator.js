@@ -49,7 +49,7 @@ function results(){
     monthInput = parseInt(month.value) -1;
     yearInput = parseInt(year.value);
     let monthsDifference = monthInput - currentMonth;
-    let daysDifference = currentDay + daysMonth[monthInput - 1] - dayInput;
+    let daysDifference = currentDay + daysMonth[monthInput] - dayInput;
 
     if(monthInput > currentMonth){
         yearsResult.innerHTML = currentYear - yearInput - 1;
