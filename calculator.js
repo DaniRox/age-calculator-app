@@ -43,45 +43,65 @@ function enabledBtn(){
     }
 }
 
-function totalDays(){
-    let daysTotal;
-    monthInput = parseInt(month.value) - 1;
-    for(let i = 0; i < daysMonth.length ; i++){
-        if(daysMonth[monthInput] > daysMonth[monthInput]){
-            daysTotal = daysMonth[i] + daysTotal;
-        }
-    }
-}
 
 function results(){
-    console.log(currentMonth);
     dayInput = parseInt(day.value);
-    monthInput = parseInt(month.value);
+    monthInput = parseInt(month.value) -1;
     yearInput = parseInt(year.value);
+    let monthsDifference = monthInput - currentMonth;
+    let daysDifference = currentDay + daysMonth[monthInput - 1] - dayInput;
 
     if(monthInput > currentMonth){
-        yearsResult.innerHTML = currentYear - yearInput - 1
-    } else {
+        yearsResult.innerHTML = currentYear - yearInput - 1;
+        if(dayInput > currentDay){
+            monthsResult.innerHTML = 12 - monthsDifference - 1;
+            daysResult.innerHTML = daysDifference;
+        }else if(dayInput === currentDay){
+            monthsResult.innerHTML = 12 - monthsDifference;
+            daysResult.innerHTML = 0;
+        }else if(dayInput < currentDay){
+            monthsResult.innerHTML = 12 - monthsDifference;
+            if(daysDifference > daysMonth[currentMonth]){
+                daysResult.innerHTML = daysDifference - daysMonth[currentMonth];
+            }else if(daysDifference === daysMonth[currentMonth]){
+                daysResult.innerHTML = daysMonth[currentMonth];
+            }
+        }
+
+    }else if(monthInput === currentMonth){
+        if(dayInput < currentDay){
+            yearsResult.innerHTML = currentYear - yearInput - 1;
+            monthsResult.innerHTML = 11;
+            if(daysDifference <= daysMonth[currentMonth]){
+                daysResult.innerHTML = daysDifference;
+            }else if(daysDifference > daysMonth[currentMonth]){
+                daysResult.innerHTML = daysDifference - daysMonth[currentMonth]
+            }
+        }else if(dayInput === currentDay){
+            yearsResult.innerHTML = currentYear - yearInput;
+            monthsResult.innerHTML = 0;
+            daysResult.innerHTML = 0;
+        }else if(dayInput > currentDay){
+            yearsResult.innerHTML = currentYear - yearInput -1;
+            monthsResult.innerHTML = 11;
+            daysResult.innerHTML = daysDifference;
+        }
+
+    }else if(monthInput < currentMonth){
         yearsResult.innerHTML = currentYear - yearInput;
-    }
-    
-    let difference;
-    if(monthInput > currentMonth){
-        difference = monthInput - currentMonth;
-        console.log(difference);
-        let result = 12 - difference;
-        console.log(result);
-        monthsResult.innerHTML = result;
-        console.log(12 - difference);
-    } if(monthInput === currentMonth){
-        monthsResult.innerHTML = "0";
-    } else if(monthInput < currentMonth){
-        monthsResult.innerHTML = currentMonth - monthInput;
-    }
 
-    for(let i = 0; i < daysMonth.length; i ++){
-        daysResult.innerHTML =  currentDay + daysMonth[monthInput - 1] - dayInput;
-    
+        if(dayInput > currentDay){
+            monthsResult.innerHTML = 0;
+            daysResult.innerHTML = daysDifference;
+        }else if(dayInput === currentDay){
+            monthsResult.innerHTML = 1;
+            daysResult.innerHTML = 0;
+        }else if(dayInput < currentDay){
+            if(daysDifference > daysMonth[currentMonth]){
+                monthsResult.innerHTML = currentMonth - monthInput;
+                daysResult.innerHTML = daysDifference - daysMonth[currentMonth];
+            }
+        }
     }
 }
 
