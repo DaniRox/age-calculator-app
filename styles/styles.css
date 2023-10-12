@@ -25,6 +25,11 @@
 html {
   font-size: 17px;
 }
+@media screen and (min-width: 770px) {
+  html {
+    font-size: 16px;
+  }
+}
 html body {
   padding-top: 4rem;
   background-color: hsl(0, 0%, 94%);
@@ -52,6 +57,24 @@ footer {
   footer {
     position: absolute;
   }
+}
+footer .icons-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+footer .icons-footer .icon {
+  height: 1.4rem;
+  margin: 1rem;
+}
+footer .icons-footer .icon-mail {
+  height: 1.2rem;
+  margin: 1rem;
+}
+footer .icons-footer .icon-dr {
+  height: 1.8rem;
+  margin: 1rem;
 }
 footer .attribution {
   width: 100%;
