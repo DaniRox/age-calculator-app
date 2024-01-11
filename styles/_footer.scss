@@ -17,7 +17,7 @@ footer{
         align-items: center;
 
         .icon{
-            height: 1.4rem;
+            height: 1.6rem;
             margin: 1rem;
         }
 
@@ -26,10 +26,6 @@ footer{
             margin: 1rem;
         }
 
-        .icon-dr{
-            height: 1.8rem;
-            margin: 1rem;
-        }
     }
 
     .attribution {
@@ -51,7 +47,7 @@ footer{
             .footer__link {
                 color: globals.$purple;
                 font-family: poppinsBold;
-                font-size: 1.1rem;
+                font-size: 1rem;
                 text-decoration: none;
                 font-weight: 700;
                 margin: 0 0.3rem;

@@ -6,15 +6,15 @@
     margin: 3rem 2rem;
     width: 20rem;
     height: 28rem;
-    padding: 3rem 1.5rem;
+    padding: 1.5rem;
     background-color: globals.$white;
     border-radius: 1.5rem 1.5rem 6rem 1.5rem;
     box-sizing: border-box;
 
     @include media-queries.desktop-s {
-        width: 32rem;
-        height: 25rem;
-        margin-top: 6%;
+        width: 26rem;
+        height: 20rem;
+        margin-top: 12%;
         margin-bottom: 4rem;
     }
 
@@ -30,7 +30,7 @@
             justify-content: space-between;
 
             @include media-queries.desktop-s {
-                width: 75%;
+                width: 70%;
             }
 
             .group-input{
@@ -41,7 +41,7 @@
                 label{
                     color: globals.$smokey-grey;
                     font-family: poppinsBold;
-                    font-size: 0.7rem;
+                    font-size: 0.5rem;
                     text-transform: uppercase;
                     letter-spacing: 0.2rem;
                     margin-bottom: 0.3rem;
@@ -50,9 +50,9 @@
                 input{
                     color: globals.$off-black;
                     font-family: poppinsBold;
-                    font-size: 1.4rem;
+                    font-size: 1rem;
                     height: 1rem;
-                    padding: 1rem;
+                    padding: 0.7rem;
                     background-color: globals.$white;
                     border: 1px solid globals.$light-grey;
                     border-radius: 0.3rem;
@@ -88,8 +88,8 @@
     
             #btn-arrow{
                 background-color: globals.$purple;
-                width: 2.5rem;
-                height: 2.5rem;
+                width: 1.4rem;
+                height: 1.4rem;
                 padding: 1rem;
                 border: none;
                 border-radius: 50%;
@@ -122,8 +122,8 @@
     
             #btn-reset{
                 background-color: globals.$off-white;
-                width: 2.5rem;
-                height: 2.5rem;
+                width: 1.4rem;
+                height: 1.4rem;
                 padding: 1rem;
                 border: 4px solid globals.$purple;
                 border-radius: 50%;
@@ -146,12 +146,9 @@
         display: flex;
         flex-direction: column;
         font-style: italic;
-        font-size: 3.1rem;
+        font-size: 2.6rem;
         font-family: poppinsExtraBoldItalic;
 
-        @include media-queries.desktop-s {
-            font-size: 3.6rem;
-        }
 
         .group-result{
             display: flex;
