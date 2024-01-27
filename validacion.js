@@ -90,6 +90,11 @@ month.addEventListener("blur", function (e){
 
 year.addEventListener("blur", function (e){
     const yearValid = e.currentTarget.value;
+    if(yearValid < 1000) {
+        spanErrorYear.innerHTML = "Must be a valid date";
+        btnForm.disabled = true;
+    }
+
     if(parseInt(year.value) <= currentYear) {
         valid();
         yearEnabled = true;
