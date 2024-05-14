@@ -7,7 +7,7 @@ footer{
     position: absolute;
 
     @include media-queries.desktop-s {
-        position: absolute;
+        position: relative;
     }
 
     .icons-footer{
