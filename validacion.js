@@ -36,14 +36,14 @@ day.addEventListener("blur", function (e){
     }
 
     if(dayValid.length === 0) {
-        spanErrorDay.innerHTML = "This field is required";
+        spanErrorDay.innerHTML = "Este campo es obligatorio";
         labels.forEach(labelError);
         inputs.forEach(inputError);
         btnForm.disabled = true;
     }
 
     if(dayValid > 31) {
-        spanErrorDay.innerHTML = "Must be a valid day";
+        spanErrorDay.innerHTML = "Debe ser un día valido";
         labels.forEach(labelError);
         inputs.forEach(inputError);
         btnForm.disabled = true;
@@ -51,7 +51,7 @@ day.addEventListener("blur", function (e){
     if(dayInput > daysMonth[parseInt(month.value) - 1]){
         labels.forEach(labelError);
         inputs.forEach(inputError);
-        spanErrorDay.innerHTML = "Must be a valid date";
+        spanErrorDay.innerHTML = "Debe ser una fecha valida";
         btnForm.disabled = true;
     }
 })
@@ -66,14 +66,14 @@ month.addEventListener("blur", function (e){
         btnForm.disabled = false;
     }
     if(monthValid.length === 0) {
-         spanErrorMonth.innerHTML = "This field is required";
+         spanErrorMonth.innerHTML = "Este campo es obligatorio";
          labels.forEach(labelError);
          inputs.forEach(inputError);
          btnForm.disabled = true;
     }
 
     if(monthValid > 12) {
-        spanErrorMonth.innerHTML = "Must be a valid month";
+        spanErrorMonth.innerHTML = "Debe ser un mes valido";
         labels.forEach(labelError);
         inputs.forEach(inputError);
         btnForm.disabled = true;
@@ -82,7 +82,7 @@ month.addEventListener("blur", function (e){
     if(dayInput > daysMonth[parseInt(month.value) - 1]){
         labels.forEach(labelError);
         inputs.forEach(inputError);
-        spanErrorDay.innerHTML = "Must be a valid date";
+        spanErrorDay.innerHTML = "Debe ser una fecha valida";
         btnForm.disabled = true;
     }
 })
@@ -91,7 +91,7 @@ month.addEventListener("blur", function (e){
 year.addEventListener("blur", function (e){
     const yearValid = e.currentTarget.value;
     if(yearValid < 1000) {
-        spanErrorYear.innerHTML = "Must be a valid date";
+        spanErrorYear.innerHTML = "Debe ser una fecha valida";
         btnForm.disabled = true;
     }
 
@@ -102,14 +102,14 @@ year.addEventListener("blur", function (e){
         btnForm.disabled = false;
     }
     if(yearValid.length === 0) {
-        spanErrorYear.innerHTML = "This field is required";
+        spanErrorYear.innerHTML = "Este campo es obligatorio";
         labels.forEach(labelError);
         inputs.forEach(inputError);
         btnForm.disabled = true;
     }
 
     if(yearValid > currentYear) {
-        spanErrorYear.innerHTML = "Must be a valid year";
+        spanErrorYear.innerHTML = "Debe ser un año valido";
         labels.forEach(labelError);
         inputs.forEach(inputError);
         btnForm.disabled = true;
