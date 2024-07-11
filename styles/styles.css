@@ -45,11 +45,11 @@ html body {
 
 footer {
   bottom: 1rem;
-  position: absolute;
+  position: relative;
 }
 @media screen and (min-width: 770px) {
   footer {
-    position: absolute;
+    position: relative;
   }
 }
 footer .icons-footer {
@@ -146,6 +146,7 @@ footer .attribution .footer__txt .footer__link {
   background-color: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 86%);
   border-radius: 0.3rem;
+  overflow: hidden;
 }
 .card form .group-form .group-input input:focus-visible {
   outline: 1px solid hsl(259, 100%, 65%);

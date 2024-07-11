@@ -4,7 +4,7 @@
 
 footer{
     bottom: 1rem;
-    position: absolute;
+    position: relative;
 
     @include media-queries.desktop-s {
         position: relative;
