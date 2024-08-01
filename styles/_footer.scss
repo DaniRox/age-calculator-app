@@ -7,7 +7,7 @@ footer{
     position: relative;
 
     @include media-queries.desktop-s {
-        position: relative;
+        position: fixed;
     }
 
     .icons-footer{
@@ -17,7 +17,7 @@ footer{
         align-items: center;
 
         .icon{
-            height: 1.6rem;
+            height: 1.5rem;
             margin: 1rem;
         }
 

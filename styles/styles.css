@@ -34,12 +34,12 @@ html body {
 }
 @media screen and (min-width: 770px) {
   html body {
-    padding-top: 2rem;
+    padding-top: 4rem;
   }
 }
 @media screen and (min-width: 1024px) {
   html body {
-    padding-top: 2rem;
+    padding-top: 4rem;
   }
 }
 
@@ -49,7 +49,7 @@ footer {
 }
 @media screen and (min-width: 770px) {
   footer {
-    position: relative;
+    position: fixed;
   }
 }
 footer .icons-footer {
@@ -59,7 +59,7 @@ footer .icons-footer {
   align-items: center;
 }
 footer .icons-footer .icon {
-  height: 1.6rem;
+  height: 1.5rem;
   margin: 1rem;
 }
 footer .icons-footer .icon-mail {
