@@ -34,12 +34,12 @@ html body {
 }
 @media screen and (min-width: 770px) {
   html body {
-    padding-top: 4rem;
+    padding-top: 8%;
   }
 }
 @media screen and (min-width: 1024px) {
   html body {
-    padding-top: 4rem;
+    padding-top: 8%;
   }
 }
 
